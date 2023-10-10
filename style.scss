@@ -28,7 +28,7 @@ html {
 }
 
 .term-countries-select {
-  font-size: 1.2em;
+  font-size: 1em;
   padding: .5em;
 }
 
@@ -36,7 +36,6 @@ html {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 20px;
-  background: #eee;
 }
 
 .term-country-header {
@@ -67,6 +66,7 @@ html {
 .term {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-left: 1em solid #0000c9;
 
  &__text {
    border-right: 1px solid;
@@ -95,20 +95,17 @@ html {
       &:hover {
         background: #0000c9;
         color: #fefefe;
-
-        &::after {
-          background: #fefefe;
-          color: #0000c9;
-        }
       }
 
       &::after {
-        content: "PDF";
+        content: "";
         font-size: 10px;
-        background: #0000c9;
+        width: 32px;
+        background: url('https://cdn.pfizer.com/pfizercom/pfe_pdf_icon_512px.png') no-repeat center/cover;
         color: #fefefe;
         padding: 2.5px 5px;
         border-radius: 10%;
+        z-index: 100;
       }
     }
  } 
@@ -116,10 +113,22 @@ html {
 
 .show-btn {
   display: inline-flex;
+  font-family: inherit;
+  font-size: inherit;
   align-self: start;
   place-items: center;
   padding: 15px 30px;
   margin-top: 1em;
+  background: #fefefe;
+  color: #0000c9;
+  border: 1px solid #0000c9;
+  border-radius: 6px;
+  transition: all .5s ease;
+
+  &:hover {
+    background: #0000c9;
+    color: #fefefe;
+  }
 }
 
 
