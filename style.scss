@@ -25,11 +25,26 @@ html {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-basis: 50%;
 }
 
 .term-countries-select {
   font-size: 1em;
   padding: .5em;
+}
+
+.term-helper-text {
+  font-size: 0.7em;
+  font-style: italic;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  
+  // @media (max-width: 48em) {
+  //   padding: 0 1em;
+  // }
 }
 
 .term {
